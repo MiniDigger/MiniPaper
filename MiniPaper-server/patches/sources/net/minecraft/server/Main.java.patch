@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/Main.java
++++ b/net/minecraft/server/Main.java
+@@ -64,6 +_,8 @@
+ 
+     @DontObfuscate
+     public static void main(String[] args) {
++        dev.minidigger.MiniPaper.main();
++
+         SharedConstants.tryDetectVersion();
+         OptionParser optionParser = new OptionParser();
+         OptionSpec<Void> optionSpec = optionParser.accepts("nogui");

@@ -1,0 +1,44 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: MiniDigger | Martin <admin@minidigger.dev>
+Date: Sun, 1 Dec 2024 10:56:34 +0100
+Subject: [PATCH] Remove rotten apples
+
+
+diff --git a/oshi/SystemInfo.java b/oshi/SystemInfo.java
+index 86a360a772f253d354533ba91f673d734bc51dbd..96ce4d43db1d272d1ed859d9f7f7ed2e8e57dbfe 100644
+--- a/oshi/SystemInfo.java
++++ b/oshi/SystemInfo.java
+@@ -12,7 +12,6 @@ import com.sun.jna.Platform;
+ 
+ import oshi.hardware.HardwareAbstractionLayer;
+ import oshi.hardware.platform.linux.LinuxHardwareAbstractionLayer;
+-import oshi.hardware.platform.mac.MacHardwareAbstractionLayer;
+ import oshi.hardware.platform.unix.aix.AixHardwareAbstractionLayer;
+ import oshi.hardware.platform.unix.freebsd.FreeBsdHardwareAbstractionLayer;
+ import oshi.hardware.platform.unix.openbsd.OpenBsdHardwareAbstractionLayer;
+@@ -20,7 +19,6 @@ import oshi.hardware.platform.unix.solaris.SolarisHardwareAbstractionLayer;
+ import oshi.hardware.platform.windows.WindowsHardwareAbstractionLayer;
+ import oshi.software.os.OperatingSystem;
+ import oshi.software.os.linux.LinuxOperatingSystem;
+-import oshi.software.os.mac.MacOperatingSystem;
+ import oshi.software.os.unix.aix.AixOperatingSystem;
+ import oshi.software.os.unix.freebsd.FreeBsdOperatingSystem;
+ import oshi.software.os.unix.openbsd.OpenBsdOperatingSystem;
+@@ -83,8 +81,6 @@ public class SystemInfo {
+         case LINUX:
+         case ANDROID:
+             return new LinuxOperatingSystem();
+-        case MACOS:
+-            return new MacOperatingSystem();
+         case SOLARIS:
+             return new SolarisOperatingSystem();
+         case FREEBSD:
+@@ -114,8 +110,6 @@ public class SystemInfo {
+         case LINUX:
+         case ANDROID:
+             return new LinuxHardwareAbstractionLayer();
+-        case MACOS:
+-            return new MacHardwareAbstractionLayer();
+         case SOLARIS:
+             return new SolarisHardwareAbstractionLayer();
+         case FREEBSD:

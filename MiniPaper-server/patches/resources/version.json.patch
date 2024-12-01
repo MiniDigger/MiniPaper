@@ -1,0 +1,10 @@
+--- a/version.json
++++ b/version.json
+@@ -1,6 +_,6 @@
+ {
+     "id": "1.21.3",
+-    "name": "1.21.3",
++    "name": "1.21.3 - MiniPaper",
+     "world_version": 4082,
+     "series_id": "main",
+     "protocol_version": 768,
